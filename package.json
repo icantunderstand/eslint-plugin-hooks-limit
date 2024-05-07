@@ -1,10 +1,9 @@
 {
   "name": "eslint-plugin-hooks-limit",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "hooks-num-limit",
   "keywords": [
     "eslint",
-    "eslintplugin",
     "eslint-plugin"
   ],
   "author": "icatunderstand",

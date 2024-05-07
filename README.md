@@ -1,58 +1,49 @@
-# eslint-plugin-hooks-num-limit
+# eslint-plugin-hooks-limit
 
-hooks-num-limit
+限制项目中hooks调用次数
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/):
+首先安装[ESLint](https://eslint.org/):
 
 ```sh
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-hooks-num-limit`:
+安装插件 `eslint-plugin-hooks-limit`:
 
 ```sh
-npm install eslint-plugin-hooks-num-limit --save-dev
+npm install eslint-plugin-hooks-limit --save-dev
 ```
 
-## Usage
+## 使用
 
-Add `hooks-num-limit` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+将eslint-plugin-hooks-limit插件添加到 `.eslintrc`配置文件.
 
 ```json
 {
     "plugins": [
-        "hooks-num-limit"
+        "hooks-limit"
     ]
 }
 ```
 
 
-Then configure the rules you want to use under the rules section.
+配置规则.支持同时配置多个规则，如下格式
 
 ```json
 {
-    "rules": {
-        "hooks-num-limit/rule-name": 2
-    }
+     "rules": {
+        "hooks-limit/no-too-many-hooks": [2, { "list": [
+            { "name": "useState", "limit": 2 },
+            { "name": "useCallback", "limit": 3 }
+        ] } ]
+  }
 }
 ```
 
 
 
-## Configurations
 
-<!-- begin auto-generated configs list -->
-TODO: Run eslint-doc-generator to generate the configs list (or delete this section if no configs are offered).
-<!-- end auto-generated configs list -->
-
-
-
-## Rules
-
-<!-- begin auto-generated rules list -->
-TODO: Run eslint-doc-generator to generate the rules list.
-<!-- end auto-generated rules list -->
 
 
